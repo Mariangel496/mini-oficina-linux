@@ -1,0 +1,30 @@
+    1  sudo groupadd ventas
+    2  sudo useradd ventas1
+    3  sudo passwd ventas1
+    4  sudo usermod -aG ventas ventas1
+    5  id ventas1
+    6  grep ventas /etc/group
+    7  sudo mkdir /ventas
+    8  sudo chown :ventas /ventas
+    9  ls -ld /ventas
+   10  sudo chmod 770 /ventas
+   11  ls -ld /ventas
+   12  cd /ventas
+   13  su - ventas1
+   14  cd /ventas
+   15  touch prueba.txt
+   16  ls -l
+   17  exit
+   18  sudo chmod g+s /ventas
+   19  su - ventas1
+   20  cd /ventas
+   21  echo "Lista de clientas" > clientes.txt
+   22  cat clientes.txt
+   23  echo "Juan" >> clientes.txt
+   24  echo "Ana" >> clientes.txt
+   25  echo "Mari" >> clientes.txt
+   26  cat clientes.txt
+   27  cat noexiste.txt 2> errores.txt
+   28  cat errores.txt
+   29  ls -l | wc -l
+   30  history > practica_dia1.txt
